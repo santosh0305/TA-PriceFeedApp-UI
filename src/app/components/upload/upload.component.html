@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-content>
+    <p>Upload Price Feeds (CSV Format)</p>
+
+    <div class="text-center">
+      <input class="form-control" type="file" (change)="onChange($event)" />
+
+      <button
+        (click)="onUpload()"
+        mat-button
+        style="background-color: #1976d2; color: white"
+      >
+        Upload
+      </button>
+    </div>
+
+    <div class="container" *ngIf="loading">
+      <h3>Loading ...</h3>
+    </div>
+
+    <div style="color: green;">
+      {{result}}
+    </div>
+  </mat-card-content>
+</mat-card>
