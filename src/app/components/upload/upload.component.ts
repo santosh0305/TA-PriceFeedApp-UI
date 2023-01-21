@@ -11,6 +11,7 @@ export class UploadComponent implements OnInit {
   loading: boolean = false;
   file: any = null;
   result:any = '';
+  showSearchLink = false;
 
   constructor(private fileUploadService : FileUploadService) { }
 
@@ -24,11 +25,12 @@ export class UploadComponent implements OnInit {
 
   onUpload() {
     this.loading = !this.loading;
-    
+    this.showSearchLink = false;
     this.fileUploadService.upload(this.file).subscribe(
         (event: any) => {
-          this.loading = false; // Flag variable
-          this.result = "Total no. Records are uploaded : "+event.result.length;
+          this.loading = false;
+          this.result = "Total count of records uploaded : "+event.result.length;
+          this.showSearchLink = true;
         }
     );
   }

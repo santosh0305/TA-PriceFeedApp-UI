@@ -3,7 +3,6 @@ import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AllMaterialModule } from '../material.module';
-import {TableFilteringExample} from './table-filtering-example';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
 import {HttpClientModule} from '@angular/common/http';
@@ -17,7 +16,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './components/app/app.component';
 
 @NgModule({
-  declarations: [TableFilteringExample, MenuComponent, FooterComponent, SearchComponent, UploadComponent, AppComponent],
+  declarations: [MenuComponent, FooterComponent, SearchComponent, UploadComponent, AppComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -29,8 +28,6 @@ import { AppComponent } from './components/app/app.component';
     AppRoutingModule
   ],
   providers: [FileUploadService],
-  // bootstrap: [TableFilteringExample],
   bootstrap: [AppComponent],
-  // exports: [ RouterModule ]
 })
 export class AppModule {}

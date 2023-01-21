@@ -20,6 +20,13 @@
 
     <div style="color: green;">
       {{result}}
+      
+    </div>
+
+    <div class="container" *ngIf="showSearchLink">
+      <a [routerLink]="['../search']" title="Search">
+        View Products
+      </a>
     </div>
   </mat-card-content>
 </mat-card>
