@@ -1,3 +1,6 @@
-# TA-Proj
+UI : 	
+Angular 15v
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-bwhgax)
+Angular Material 15.1.1
+          
+Proxy Config for Handling CORS
