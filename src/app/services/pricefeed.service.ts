@@ -15,11 +15,11 @@ export class PricefeedService {
   }
 
   getAll(){
-    return this.httpClient.get(environment.apiGetAllProductsUrl);
+    return this.httpClient.get(environment.apiProductsUrl);
   }
 
   getById(id : number){
-    return this.httpClient.get(environment.apiGetAllProductsUrl +'/'+ id);
+    return this.httpClient.get(environment.apiProductsUrl +'/'+ id);
   }
 
   put(url : any, payload : any){
@@ -33,6 +33,7 @@ export class PricefeedService {
     );
   }
 
+  // Extend to Log4Net implementation - Global Error Handling
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);

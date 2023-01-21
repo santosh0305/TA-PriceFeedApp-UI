@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
-  apiGetAllProductsUrl : 'https://localhost:7254/Products/GetAllProducts',
-  apiPosrProductsUrl : 'https://localhost:7254/File/Upload',
+  apiProductsUrl : 'https://localhost:7254/Products/GetAllProducts',
+  apiFilesUrl : 'https://localhost:7254/File/Upload',
 };

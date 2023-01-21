@@ -27,13 +27,7 @@ export class UploadComponent implements OnInit {
     
     this.fileUploadService.upload(this.file).subscribe(
         (event: any) => {
-            if (typeof (event) === 'object') {
-
-                // Short link via api response
-                this.shortLink = event.link;
-
-                this.loading = false; // Flag variable
-            }
+          this.loading = false; // Flag variable
           this.result = "Total no. Records are uploaded : "+event.result.length;
         }
     );
